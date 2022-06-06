@@ -4,7 +4,7 @@
 https://telentjunction.netlify.app/
 
 
-Used API  - https://fakestoreapi.com/products <br>
+>> - Used API  - https://fakestoreapi.com/products <br>
 >> - used Function based component
 >> - used es-6 Arrow functions
 >> - used some components rendering on conditional based
