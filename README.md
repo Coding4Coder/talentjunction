@@ -8,7 +8,7 @@ https://telentjunction.netlify.app/
 >> - used Function based component
 >> - used es-6 Arrow functions
 >> - used some components rendering on conditional based
->> - fetch method with async and wait
+>> - API fetch method with async and wait
 >> - useState and useEffect Hooks
 >> - try/catch error - if any problem to laod the API then we can get error message
 >> - used the react lazy and suspense load
