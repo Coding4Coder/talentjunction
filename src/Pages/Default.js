@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { ErrorMsg, MainContainer, PageHeading } from "../Components/Styles/Global.style";
+import ReactReadMoreReadLess from "react-read-more-read-less";
 
 const Default = () => {
     const [item, setItem] = useState([]);
@@ -22,10 +23,22 @@ const Default = () => {
     useEffect(()=>{
         loadItemsData();
     },[]);
+
+    
+    function handleFavorite(id) {
+        const newFavorites = item.map(itemName => {
+          return itemName.id === id ? { ...itemName, favorite: !itemName.favorite } : itemName;
+        });
+    
+        setItem(newFavorites);
+      }
+
+
   return (
     <>
-      <PageHeading>List of product</PageHeading>
+      <PageHeading>List of products</PageHeading>
       <ErrorMsg className="errorMsg"></ErrorMsg>
+
       <MainContainer>
       <div className="card-columns">
           {
@@ -34,15 +47,38 @@ const Default = () => {
                    <img src={itemName.image} alt={itemName.category} />
                     <div className="card-body">
                     <h5 className="card-title">{itemName.category}</h5>
-                    <p className="card-text">{itemName.description.split(" ", 10).join(" ")}</p>
+
+                    <ReactReadMoreReadLess
+                        charLimit={40}
+                        readMoreText={"Read more ▼"}
+                        readLessText={"Read less ▲"}
+                        >
+                        {itemName.description}
+                     </ReactReadMoreReadLess>
+
+
+                   
                   </div>
                   <div className="card-footer">
                     <small className="text-muted">Price $ - {itemName.price}</small>
                   </div>
+                    <div className="card-footer">
+                        <button onClick={() => {  handleFavorite(itemName.id); }}>
+                            {itemName.favorite === true ? "Remove from Fav" : "Add to Fav"}
+                        </button>
+                    </div>
                 </div>
               ))
           }
           </div>
+                <div className="favList">
+                  <h1>Favorite list</h1>
+                    <ul>
+                        {item.map(itemName =>
+                        itemName.favorite === true ? <li key={itemName.id}>{itemName.category}</li> : null
+                        )}
+                    </ul>
+                </div>
       </MainContainer>
     </>
   );

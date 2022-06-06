@@ -1,252 +1,54 @@
-@import './Font.scss';
-@import './Variables.scss';
-
-
-
+#root{
+    position: relative;
+}
 .main-container{
-     background: rgb(100, 5, 129);
-     margin: 2rem;
-     padding: .5rem;
-     border-radius: $rounded-corner;
-     box-shadow: $box-shadow;
-     .bdr-btm{
-         border-bottom: 1px solid rgb(146, 109, 177);
-     }
-     .bdr-top{
-        border-top: 1px solid rgb(146, 109, 177);
-    }
-    .heading{
-        font: 2rem $font-roboto;
-        text-transform: uppercase;
-        padding: 2rem 0;
-        background: #a00f94;
-        padding: 1rem 4rem;
-        border-radius: 7px;
-        text-decoration: none;
-        color: rgb(241, 164, 248);
-        @media (max-width: $layout-breakpoint-small) {
-            font-size: 1.2rem;
-        } 
+    background: rgb(241, 241, 241);
+    width: 90%;
+    min-height: 5rem;
+    margin: 1rem auto 8rem auto;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    padding: 2.5rem;
 
-       a.link-title{
-        font: 2rem $font-roboto;
-        text-transform: uppercase;
-        padding: 2rem 0;
-        background: #a00f94;
-        padding: 1rem 4rem;
-        border-radius: 7px;
-        text-decoration: none;
-        color: rgb(241, 164, 248);
-        @media (max-width: $layout-breakpoint-small) {
-            font-size: 1.2rem;
-        } 
-       }
-    }
-
-
-
-    
-     .row{
-         padding: 1rem;
-     }
-        .txt{
-            font: 2rem $font-roboto;
-            color: #fff;
-            @media (max-width: $layout-breakpoint-small) {
-                font-size: 1.2rem;
-            } 
-        }
-        .txt-sm{
-            font: 1rem $font-roboto;
-            color: #fff;
-            @media (max-width: $layout-breakpoint-small) {
-                font-size: 1rem;
-            } 
-        }
-        .txt-title{
-            font: 1rem $font-roboto;
-            color: rgb(243, 209, 57);
-            @media (max-width: $layout-breakpoint-small) {
-                font-size: 1.2rem;
-            } 
-        }
-      .bg-red{
-        background: rgb(88, 40, 64) !important;
-      }
-        .table-header{
-            border-bottom: 1px solid rgb(167, 186, 202);
-            border-top: 1px solid rgb(167, 186, 202);
-            margin: 2rem;
-            padding: 1.5rem;
-            background: rgb(114, 2, 129);
-            font-size: 1.52rem;
-        }
-
-        // Cal function
-        .date-box{
-            background: rgb(44, 22, 97);
-            padding: 1.5rem;
-            color: #fff;
-            font-size: 1.5rem;
-            width: calc(100% - 0px);
-            display: flex;
-        }
 }
-
-.txt-sm{
-    font: 1rem $font-roboto;
-    color: #fff;
-    @media (max-width: $layout-breakpoint-small) {
-        font-size: 1rem;
-    } 
-}
-.title{
-    background: #21012b;
-    padding: .5rem 0;
-    color: rgb(255, 5, 222);
-    font: 1.5rem $font-roboto;
-    text-transform: none;
-}
-// 
-.top-header {
-   
-    background: #fafafa;
-    color: rgb(72, 75, 75);
+footer{
+    background: rgb(2, 33, 75);
+    color: azure;
     font-size: 1.2rem;
-    padding: 0 1rem;
-    box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px;
-    .logo{
-       width: 200px;
-       height: auto;
-    }
-    
-  .nav-links{
-      padding: 2rem 0 0 0;
-      ul li{
-          display: inline !important;
-          padding: 0 .71rem;
-
-      
-            a:link, a:visited {
-                color: #541e64;
-                padding: .5rem .5rem;
-                text-decoration: none;
-                font: normal 1.2rem $font-roboto;
-
-            }
-            a:hover {
-                color: #666666 !important;
-                padding: .5rem .5rem;
-                text-decoration: none;
-            }
-            a.active:link{
-                padding: .5rem .5rem;
-                border-bottom: 1px solid #b10b5e;
-            }
-         }
-      }
-}
-
-.card{
-    width: 300px !important;
-    overflow: hidden;
-}
-.textbox-container {
-    padding: 2rem;
-    border-radius: 20px;
-    background: #848484;
-        input {
-            border: 1px solid #848484;
-            -webkit-border-radius: 30px;
-            -moz-border-radius: 30px;
-            border-radius: 20px;
-            outline:0;
-            height:35px;
-            width: 275px;
-            padding-left:20px;
-            padding-right:10px;
-            margin: 5px;
-        }
-        .btn-Submit {
-            background: #570350;
-            border-radius: 30px;
-            outline:0;
-            height:35px;
-            width: 99%;
-            color: #fff;
-            font-size: 1.2rem;
-            padding: 20px;
-            line-height: 0;
-            margin-top: 2rem;
-        }
-}
-
-//table
-.page-title{
-    font-size: 1.6rem;
-    text-align: center;
-    color: #fff;
-}
-
-.train {
-    font-family: Arial, Helvetica, sans-serif;
-    border-collapse: collapse;
+    padding: 1rem;
     width: 100%;
-    .noMatch{
-         color: rgb(231, 0, 173);
-         font: 3.2rem/10rem $font-roboto;
-         text-align: center;
-        
-    }
-  }
-  .train th {
-   text-transform: capitalize;
-  }
-  .train td, .train th {
-    border: 1px solid #ddd;
-    padding: 8px;
-    img{
-        width: 150px;
-        height: 100px;
-    }
-  }
-  
-  .train tr:nth-child(even){background-color: #f2f2f2 }
-  .train tr:nth-child(odd){background-color: #d7d3db}
-  
-  .train tr:hover {background-color: rgb(178, 119, 201);}
-  
-  .train th {
-    padding-top: 12px;
-    padding-bottom: 12px;
-    text-align: left;
-    background-color: #8a21bb;
-    color: white;
-    font: 1.2rem $font-roboto;
-    text-align: center;
-  }
-
-.btn-back{
-    background: #ec74e2;
-    border-radius: 30px;
-    outline:0;
-    height:35px;
-    width: 150px;
-    color: #fff;
-    font-size: 1.2rem;
-    padding: 20px;
-    line-height: 0;
-    margin-top: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 5rem;
+   // position: absolute;
+    bottom: 0;
 }
-.btn-action{
-    background: #ec74e2;
-    border-radius: 8px;
-    outline:0;
- 
-    width: 40px;
-    color: #fff;
-    font-size: 1rem;
-    padding: .1rem 3px;
-    line-height: 0;
-    margin: .51rem;
+.model-pop{
+    max-width: 700px !important;
+    min-height: 250px;
+    position: fixed;
+    left: 50%;
+    top: 50;
+    transform: translate(-50%, -50%);
+    z-index: 1000;
+    .btn-close{
+        position: absolute;
+        right: 10px;
+        top: 10px;
+    }
+    .btn-close:hover{
+      background-color: rgb(255, 0, 106) !important;
+  }
+}
+.btn-model{
+    width: 120px !important;
+}
+
+.overlayMask{
+    position: fixed;
+    left:0;
+    top:0;
+    right:0;
+    bottom:0;
+    background: rgb(0, 0, 0, 0.7);
 }

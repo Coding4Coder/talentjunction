@@ -33,7 +33,28 @@ export const MainContainer = styled.section `
                     text-align:center;
                     font-family: 'Nunito', sans-serif;
                 }
+                .card-footer{
+                    button {
+                        background: #e55984;
+                        color: #fff;
+                        border: navajowhite;
+                        font-size: 15px;
+                        padding: 3px 8px;
+                    }
+                }
+                .react-read-more-read-less{
+                    color:#ff6600;
+                }
             }
+        }
+        .favList{
+                        background: #e55984;
+                        color: #fff;
+                        border: navajowhite;
+                        font-size: 15px;
+                        padding: 3px 3px;
+                        width:15rem;
+                        
         }
         .imgRes{
             width:100%;
@@ -42,9 +63,14 @@ export const MainContainer = styled.section `
 `;
 export const PageHeading = styled.h1 `
     font-size: 2.5rem;
-    color:#037973;
+    color:#6699FF;
     text-align:center;
     font-family: 'Nunito', sans-serif;
+    margin: 3rem;
+`;
+export const Center = styled.div `
+    display: flex;
+    justify-content:center;
     margin: 3rem;
 `;
 export const ErrorMsg = styled.div `
@@ -53,6 +79,10 @@ export const ErrorMsg = styled.div `
     text-align:center;
     font-family: 'Nunito', sans-serif;
     margin: 1rem;
+`;
+export const ReadMore = styled.p `
+    font-size: 1rem;
+    margin-bottom:0;
 `;
 
 export const PageWrapper = styled.div `
@@ -70,6 +100,19 @@ flex-wrap:wrap;
             font-family: 'Nunito', sans-serif;
             margin: 1rem 0;
         }
+      
+           a.read-more:link, a.read-more:visited {
+                color: #333333;
+                text-decoration: none !important;
+                cursor: pointer;
+
+            }
+            a.read-more:hover {
+                color: #333333 !important;
+                text-decoration: none  !important;
+                cursor: pointer;
+
+            }
     }
     @media only screen and (max-width: 850px) {
         .item{
