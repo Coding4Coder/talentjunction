@@ -41,21 +41,20 @@ export const MainContainer = styled.section `
                         font-size: 15px;
                         padding: 3px 8px;
                     }
+                    .addToCart {
+                        background:#00b6e1;
+                        color: #fff;
+                        border: navajowhite;
+                        font-size: 15px;
+                        padding: 3px 8px;
+                    }
                 }
                 .react-read-more-read-less{
                     color:#ff6600;
                 }
             }
         }
-        .favList{
-                        background: #e55984;
-                        color: #fff;
-                        border: navajowhite;
-                        font-size: 15px;
-                        padding: 3px 3px;
-                        width:15rem;
-                        
-        }
+ 
         .imgRes{
             width:100%;
             height:auto;
@@ -127,4 +126,24 @@ flex-wrap:wrap;
     }
     
  }
+`;
+
+
+
+export const FavList = styled.div `
+       background: #e55984;
+      color: #fff;
+      border: navajowhite;
+      font-size: 15px;
+      padding: 3px 1px;
+      width:15rem;
+      text-align:left;
+      margin:-3rem auto 2rem  auto;
+      ul li{
+          padding: 2px;
+      }
+  h1{
+      font-size: 20px;
+      padding-left:15px;
+  }
 `;

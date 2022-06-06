@@ -1,5 +1,5 @@
-import React, { useEffect, useState } from "react";
-import { ErrorMsg, MainContainer, PageHeading } from "../Components/Styles/Global.style";
+import React, { useEffect, useState, Suspense } from "react";
+import { ErrorMsg, MainContainer, PageHeading, FavList } from "../Components/Styles/Global.style";
 import ReactReadMoreReadLess from "react-read-more-read-less";
 
 const Default = () => {
@@ -20,18 +20,18 @@ const Default = () => {
     }
     console.log(item);
 
-    useEffect(()=>{
-        loadItemsData();
-    },[]);
-
+ 
     
-    function handleFavorite(id) {
+    const handleFavorite = (id) => {
         const newFavorites = item.map(itemName => {
-          return itemName.id === id ? { ...itemName, favorite: !itemName.favorite } : itemName;
+          return itemName.id === id ? { ...itemName, favorite: !itemName.favorite } : itemName; 
         });
-    
         setItem(newFavorites);
       }
+
+      useEffect(()=>{
+        loadItemsData();
+    },[]);
 
 
   return (
@@ -61,6 +61,7 @@ const Default = () => {
                   </div>
                   <div className="card-footer">
                     <small className="text-muted">Price $ - {itemName.price}</small>
+                    <button className="addToCart" >Add to cart</button>
                   </div>
                     <div className="card-footer">
                         <button onClick={() => {  handleFavorite(itemName.id); }}>
@@ -71,15 +72,17 @@ const Default = () => {
               ))
           }
           </div>
-                <div className="favList">
+                
+      </MainContainer>
+                 <FavList>
                   <h1>Favorite list</h1>
                     <ul>
                         {item.map(itemName =>
-                        itemName.favorite === true ? <li key={itemName.id}>{itemName.category}</li> : null
+                        itemName.favorite === true ? <li key={itemName.id}>
+                            {itemName.category}</li> : null
                         )}
                     </ul>
-                </div>
-      </MainContainer>
+                </FavList>
     </>
   );
 };
